@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduTrack | Student Login</title>
+
+<!-- Bootstrap CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Google Font -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#2563eb,#7c3aed,#10b981);
+background-size:300% 300%;
+animation:bgMove 10s infinite alternate;
+overflow:hidden;
+
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:left;
+}
+
+100%{
+background-position:right;
+}
+
+}
+
+.circle{
+
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,.15);
+
+}
+
+.c1{
+
+width:250px;
+height:250px;
+top:-70px;
+left:-70px;
+
+}
+
+.c2{
+
+width:350px;
+height:350px;
+bottom:-120px;
+right:-120px;
+
+}
+
+.login-card{
+
+width:420px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(18px);
+padding:40px;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.logo{
+
+width:90px;
+height:90px;
+background:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:auto;
+font-size:40px;
+color:#2563eb;
+margin-bottom:20px;
+
+}
+
+.login-card h2{
+
+color:white;
+font-weight:700;
+text-align:center;
+
+}
+
+.login-card p{
+
+color:#f1f1f1;
+text-align:center;
+margin-bottom:30px;
+
+}
+
+.form-control{
+
+height:55px;
+border-radius:15px;
+padding-left:45px;
+border:none;
+
+}
+
+.input-group{
+
+position:relative;
+margin-bottom:20px;
+
+}
+
+.input-group i{
+
+position:absolute;
+left:15px;
+top:17px;
+font-size:18px;
+color:#666;
+z-index:10;
+
+}
+
+.toggle-password{
+
+position:absolute;
+right:18px;
+top:17px;
+cursor:pointer;
+color:#666;
+z-index:10;
+
+}
+
+.form-check-label{
+
+color:white;
+
+}
+
+.forgot{
+
+float:right;
+color:white;
+text-decoration:none;
+
+}
+
+.forgot:hover{
+
+color:#ffe082;
+
+}
+
+.login-btn{
+
+width:100%;
+height:55px;
+border:none;
+border-radius:15px;
+font-size:18px;
+font-weight:600;
+background:white;
+color:#2563eb;
+transition:.3s;
+
+}
+
+.login-btn:hover{
+
+background:#2563eb;
+color:white;
+transform:translateY(-3px);
+
+}
+
+.divider{
+
+text-align:center;
+margin:25px 0;
+color:white;
+position:relative;
+
+}
+
+.divider::before{
+
+content:"";
+position:absolute;
+width:40%;
+height:1px;
+background:white;
+left:0;
+top:50%;
+
+}
+
+.divider::after{
+
+content:"";
+position:absolute;
+width:40%;
+height:1px;
+background:white;
+right:0;
+top:50%;
+
+}
+
+.social-login{
+
+display:flex;
+justify-content:center;
+gap:15px;
+
+}
+
+.social-login a{
+
+width:50px;
+height:50px;
+background:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+color:#2563eb;
+transition:.3s;
+
+}
+
+.social-login a:hover{
+
+transform:scale(1.1);
+
+}
+
+.register-link{
+
+text-align:center;
+margin-top:25px;
+color:white;
+
+}
+
+.register-link a{
+
+color:#ffe082;
+font-weight:600;
+text-decoration:none;
+
+}
+
+.error{
+
+color:#ffb3b3;
+font-size:14px;
+display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
+<div class="login-card">
+
+<div class="logo">
+
+<i class="bi bi-mortarboard-fill"></i>
+
+</div>
+
+<h2>Welcome Back</h2>
+
+<p>
+
+Login to continue your learning journey
+
+</p>
+
+<form id="loginForm">
+
+<div class="input-group">
+
+<i class="bi bi-envelope-fill"></i>
+
+<input
+type="email"
+class="form-control"
+placeholder="Enter Email"
+id="email"
+required>
+
+</div>
+
+<div class="error" id="emailError">
+
+Please enter a valid email.
+
+</div>
+
+<div class="input-group">
+
+<i class="bi bi-lock-fill"></i>
+
+<input
+type="password"
+class="form-control"
+placeholder="Enter Password"
+id="password"
+required>
+
+<i
+class="bi bi-eye-slash-fill toggle-password"
+id="togglePassword"></i>
+
+</div>
+
+<div class="error" id="passwordError">
+
+Password must contain at least 6 characters.
+
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<div class="form-check">
+
+<input
+class="form-check-input"
+type="checkbox">
+
+<label class="form-check-label">
+
+Remember Me
+
+</label>
+
+</div>
+
+<a href="#" class="forgot">
+
+Forgot Password?
+
+</a>
+
+</div>
+
+<button
+type="submit"
+class="login-btn">
+
+Login
+
+</button>
+
+<div class="divider">
+
+OR
+
+</div>
+
+<div class="social-login">
+
+<a href="#">
+
+<i class="bi bi-google"></i>
+
+</a>
+
+<a href="#">
+
+<i class="bi bi-facebook"></i>
+
+</a>
+
+<a href="#">
+
+<i class="bi bi-github"></i>
+
+</a>
+
+</div>
+<div class="register-link">
+
+Don't have an account?
+
+<a href="register.html">
+
+Register Now
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+// =============================
+// Show / Hide Password
+// =============================
+
+const togglePassword = document.getElementById("togglePassword");
+const password = document.getElementById("password");
+
+togglePassword.addEventListener("click", function () {
+
+    if (password.type === "password") {
+
+        password.type = "text";
+
+        this.classList.remove("bi-eye-slash-fill");
+        this.classList.add("bi-eye-fill");
+
+    } else {
+
+        password.type = "password";
+
+        this.classList.remove("bi-eye-fill");
+        this.classList.add("bi-eye-slash-fill");
+
+    }
+
+});
+
+// =============================
+// Login Validation
+// =============================
+
+const form = document.getElementById("loginForm");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let valid = true;
+
+const email = document.getElementById("email").value.trim();
+
+const passwordValue = document.getElementById("password").value.trim();
+
+const emailError = document.getElementById("emailError");
+
+const passwordError = document.getElementById("passwordError");
+
+// Email Validation
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(!emailPattern.test(email)){
+
+emailError.style.display="block";
+
+valid=false;
+
+}else{
+
+emailError.style.display="none";
+
+}
+
+// Password Validation
+
+if(passwordValue.length < 6){
+
+passwordError.style.display="block";
+
+valid=false;
+
+}else{
+
+passwordError.style.display="none";
+
+}
+
+// Success
+
+if(valid){
+
+alert("Login Successful!");
+
+// Redirect to dashboard
+
+window.location.href="dashboard.html";
+
+}
+
+});
+
+// =============================
+// Input Animation
+// =============================
+
+const inputs=document.querySelectorAll(".form-control");
+
+inputs.forEach(input=>{
+
+input.addEventListener("focus",()=>{
+
+input.style.boxShadow="0 0 12px rgba(37,99,235,.5)";
+
+});
+
+input.addEventListener("blur",()=>{
+
+input.style.boxShadow="none";
+
+});
+
+});
+
+// =============================
+// Login Button Ripple Effect
+// =============================
+
+const loginBtn=document.querySelector(".login-btn");
+
+loginBtn.addEventListener("mouseover",()=>{
+
+loginBtn.style.transform="scale(1.03)";
+
+});
+
+loginBtn.addEventListener("mouseleave",()=>{
+
+loginBtn.style.transform="scale(1)";
+
+});
+
+</script>
+
+</body>
+
+</html>
