@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Learning | NovaLearn</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-my-courses">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="sidebar" id="sidebar">
+  <div class="logo">
+    <i class="bi bi-mortarboard-fill"></i>
+    <div>NovaLearn<span class="badge-dot"></span><small>STUDENT PORTAL</small></div>
+  </div>
+
+  <div class="menu-title">Learning</div>
+  <a href="my-courses.html" class="nav-link active"><span class="left"><i class="bi bi-house-door-fill"></i>My Learning</span></a>
+  <a href="browse-courses.html" class="nav-link"><span class="left"><i class="bi bi-search"></i>Browse Courses</span></a>
+  <a href="progress.html" class="nav-link"><span class="left"><i class="bi bi-graph-up-arrow"></i>Progress</span></a>
+  <a href="materials.html" class="nav-link"><span class="left"><i class="bi bi-folder2-open"></i>Resources</span></a>
+  <a href="certificate.html" class="nav-link"><span class="left"><i class="bi bi-patch-check-fill"></i>Certificates</span><span class="nav-badge">6</span></a>
+  <a href="notifications.html" class="nav-link"><span class="left"><i class="bi bi-bell-fill"></i>Notifications</span><span class="nav-badge">3</span></a>
+
+  <div class="menu-title">Account</div>
+  <a href="#" class="nav-link"><span class="left"><i class="bi bi-gear"></i>Settings</span></a>
+  <a href="#" class="nav-link"><span class="left"><i class="bi bi-box-arrow-right"></i>Logout</span></a>
+
+  <div class="sidebar-footer">
+    <small style="color:#C9BFE8;font-weight:600;">Learning plan</small>
+    <div class="stor"><span style="width:71%;"></span></div>
+    <small style="color:#8C7FB8;font-size:11px;">Nova Pro &middot; renews 12 Sep 2026</small>
+  </div>
+</div>
+
+<div class="main">
+<div class="topbar">
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar"><i class="bi bi-list" style="font-size:20px;"></i></button>
+  <div class="search-box">
+    <i class="bi bi-search"></i>
+    <input type="text" id="globalSearch" placeholder="Search courses, lessons, certificates..." aria-label="Search">
+  </div>
+  <div class="top-icons">
+    <button class="icon-btn" aria-label="Messages"><i class="bi bi-envelope"></i><span class="ping"></span></button>
+    <a class="icon-btn" href="notifications.html" aria-label="Notifications, 3 unread"><i class="bi bi-bell"></i><span class="ping"></span></a>
+    <div class="profile">
+      <img src="https://i.pravatar.cc/100?img=47" alt="">
+      <div><strong>Arjun Mehta</strong><small>Learner &middot; Nova Pro</small></div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main id="main-content">
+<div class="page-head"><div><span class="eyebrow">Student portal</span><h2>My Learning</h2><p>Pick up where you left off, or explore something new.</p></div><div class="d-flex gap-2"><a href="browse-courses.html" class="btn-nova-outline"><i class="bi bi-search"></i> Browse catalog</a></div></div>
+<section><div class="row g-4 mb-4"><div class="col-lg-3 col-md-6"><div class="stat-card tile"><div><h6>Courses in progress</h6><h2>3</h2><div class="delta up"><i class="bi bi-arrow-up-short"></i>on track</div></div><div class="icon-wrap icon-violet"><i class="bi bi-journal-bookmark-fill"></i></div></div></div><div class="col-lg-3 col-md-6"><div class="stat-card tile"><div><h6>Completed</h6><h2>12</h2><div class="delta up"><i class="bi bi-arrow-up-short"></i>+2 this month</div></div><div class="icon-wrap icon-emerald"><i class="bi bi-check2-circle"></i></div></div></div><div class="col-lg-3 col-md-6"><div class="stat-card tile"><div><h6>Certificates</h6><h2>6</h2><div class="delta flat"><i class="bi bi-dot"></i>2 in progress</div></div><div class="icon-wrap icon-amber"><i class="bi bi-patch-check-fill"></i></div></div></div><div class="col-lg-3 col-md-6"><div class="stat-card tile"><div><h6>Learning streak</h6><h2>18d</h2><div class="delta up"><i class="bi bi-fire"></i>personal best</div></div><div class="icon-wrap icon-coral"><i class="bi bi-fire"></i></div></div></div></div><div class="stat-card mb-4" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;"><div class="course-thumb" style="width:120px;height:80px;border-radius:14px;background:linear-gradient(135deg,#6D28D9,#8B5CF6);flex-shrink:0;"><i class="bi bi-code-slash"></i></div><div style="flex:1;min-width:200px;"><span class="course-cat">Development</span><h4>Full Stack Development</h4><div class="progress" style="max-width:320px;margin-top:8px;"><div class="progress-bar" style="width:80%;background:var(--violet);"></div></div><small style="color:var(--ink-soft);">80% complete &middot; Module 9 of 12</small></div><a href="course-content.html" class="btn-nova">Resume <i class="bi bi-arrow-right"></i></a></div><div class="tab-pills mb-4"><button class="tab-pill active" data-tab-target="inprogress">In Progress</button><button class="tab-pill" data-tab-target="completed">Completed</button><button class="tab-pill" data-tab-target="saved">Saved</button></div><div class="row g-4" data-tab-panel="inprogress"><div class="col-lg-4 col-md-6"><div class="course-card"><div class="course-thumb" style="background:linear-gradient(135deg,#6D28D9,#8B5CF6);"><i class="bi bi-code-slash"></i></div><div class="course-body"><span class="course-cat">Development</span><h4>Full Stack Development</h4><div class="course-instructor"><i class="bi bi-person-circle"></i> John Doe</div><div class="progress"><div class="progress-bar" style="width:80%;background:var(--violet);"></div></div><small style="color:var(--ink-soft);">80% complete</small><a href="course-content.html" class="btn-nova" style="justify-content:center;">Continue</a></div></div></div><div class="col-lg-4 col-md-6"><div class="course-card"><div class="course-thumb" style="background:linear-gradient(135deg,#2E90D9,#6FC3F7);"><i class="bi bi-cloud-fill"></i></div><div class="course-body"><span class="course-cat">Cloud</span><h4>Cloud Computing Essentials</h4><div class="course-instructor"><i class="bi bi-person-circle"></i> Michael Smith</div><div class="progress"><div class="progress-bar" style="width:30%;background:var(--violet);"></div></div><small style="color:var(--ink-soft);">30% complete</small><a href="course-content.html" class="btn-nova" style="justify-content:center;">Continue</a></div></div></div><div class="col-lg-4 col-md-6"><div class="course-card"><div class="course-thumb" style="background:linear-gradient(135deg,#4C1D95,#6D28D9);"><i class="bi bi-stars"></i></div><div class="course-body"><span class="course-cat">AI & ML</span><h4>Generative AI with Python</h4><div class="course-instructor"><i class="bi bi-person-circle"></i> Sarah Lee</div><div class="progress"><div class="progress-bar" style="width:12%;background:var(--violet);"></div></div><small style="color:var(--ink-soft);">12% complete</small><a href="course-content.html" class="btn-nova" style="justify-content:center;">Continue</a></div></div></div></div><div class="row g-4" data-tab-panel="completed" style="display:none;"><div class="col-lg-4 col-md-6"><div class="course-card"><div class="course-thumb" style="background:linear-gradient(135deg,#12A466,#5FD8A6);"><i class="bi bi-palette-fill"></i></div><div class="course-body"><span class="course-cat">Design</span><h4>UI/UX Design Systems</h4><div class="course-instructor"><i class="bi bi-person-circle"></i> Ravi Kapoor</div><div class="progress"><div class="progress-bar" style="width:100%;background:var(--violet);"></div></div><small style="color:var(--ink-soft);">100% complete</small><a href="certificate.html" class="btn-nova-outline" style="justify-content:center;">View certificate</a></div></div></div><div class="col-lg-4 col-md-6"><div class="course-card"><div class="course-thumb" style="background:linear-gradient(135deg,#F5A524,#E4574C);"><i class="bi bi-bar-chart-fill"></i></div><div class="course-body"><span class="course-cat">Data</span><h4>Data Analytics with SQL</h4><div class="course-instructor"><i class="bi bi-person-circle"></i> Priya Nair</div><div class="progress"><div class="progress-bar" style="width:100%;background:var(--violet);"></div></div><small style="color:var(--ink-soft);">100% complete</small><a href="certificate.html" class="btn-nova-outline" style="justify-content:center;">View certificate</a></div></div></div></div><div class="row g-4" data-tab-panel="saved" style="display:none;"><div class="col-lg-4 col-md-6"><div class="course-card"><div class="course-thumb" style="background:linear-gradient(135deg,#E4574C,#F08A82);"><i class="bi bi-shield-lock-fill"></i></div><div class="course-body"><span class="course-cat">Security</span><h4>Cyber Security Fundamentals</h4><div class="course-instructor"><i class="bi bi-person-circle"></i> Emma Brown</div><div class="progress"><div class="progress-bar" style="width:0%;background:var(--violet);"></div></div><small style="color:var(--ink-soft);">0% complete</small><a href="course-content.html" class="btn-nova" style="justify-content:center;">Continue</a></div></div></div></div></section>
+</main>
+
+<footer class="site-footer">&copy; 2026 NovaLearn. All rights reserved.</footer>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

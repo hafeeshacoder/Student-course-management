@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Stack Development | NovaLearn</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-course-content">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="sidebar" id="sidebar">
+  <div class="logo">
+    <i class="bi bi-mortarboard-fill"></i>
+    <div>NovaLearn<span class="badge-dot"></span><small>STUDENT PORTAL</small></div>
+  </div>
+
+  <div class="menu-title">Learning</div>
+  <a href="my-courses.html" class="nav-link active"><span class="left"><i class="bi bi-house-door-fill"></i>My Learning</span></a>
+  <a href="browse-courses.html" class="nav-link"><span class="left"><i class="bi bi-search"></i>Browse Courses</span></a>
+  <a href="progress.html" class="nav-link"><span class="left"><i class="bi bi-graph-up-arrow"></i>Progress</span></a>
+  <a href="materials.html" class="nav-link"><span class="left"><i class="bi bi-folder2-open"></i>Resources</span></a>
+  <a href="certificate.html" class="nav-link"><span class="left"><i class="bi bi-patch-check-fill"></i>Certificates</span><span class="nav-badge">6</span></a>
+  <a href="notifications.html" class="nav-link"><span class="left"><i class="bi bi-bell-fill"></i>Notifications</span><span class="nav-badge">3</span></a>
+
+  <div class="menu-title">Account</div>
+  <a href="#" class="nav-link"><span class="left"><i class="bi bi-gear"></i>Settings</span></a>
+  <a href="#" class="nav-link"><span class="left"><i class="bi bi-box-arrow-right"></i>Logout</span></a>
+
+  <div class="sidebar-footer">
+    <small style="color:#C9BFE8;font-weight:600;">Learning plan</small>
+    <div class="stor"><span style="width:71%;"></span></div>
+    <small style="color:#8C7FB8;font-size:11px;">Nova Pro &middot; renews 12 Sep 2026</small>
+  </div>
+</div>
+
+<div class="main">
+<div class="topbar">
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar"><i class="bi bi-list" style="font-size:20px;"></i></button>
+  <div class="search-box">
+    <i class="bi bi-search"></i>
+    <input type="text" id="globalSearch" placeholder="Search courses, lessons, certificates..." aria-label="Search">
+  </div>
+  <div class="top-icons">
+    <button class="icon-btn" aria-label="Messages"><i class="bi bi-envelope"></i><span class="ping"></span></button>
+    <a class="icon-btn" href="notifications.html" aria-label="Notifications, 3 unread"><i class="bi bi-bell"></i><span class="ping"></span></a>
+    <div class="profile">
+      <img src="https://i.pravatar.cc/100?img=47" alt="">
+      <div><strong>Arjun Mehta</strong><small>Learner &middot; Nova Pro</small></div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main id="main-content">
+<div class="breadcrumb-nova"><a href="my-courses.html">My Learning</a><i class="bi bi-chevron-right"></i><span>Full Stack Development</span></div><div class="page-head"><div><span class="eyebrow">Development &middot; 80% complete</span><h2>Full Stack Development</h2><p>12 modules &middot; 46 lessons &middot; 28h total</p></div><div class="d-flex gap-2"><a href="video-player.html" class="btn-nova">Resume lesson <i class="bi bi-play-fill"></i></a></div></div>
+<section><div class="row g-4"><div class="col-lg-8"><div class="section-head"><div><span class="eyebrow">Curriculum</span><h3>Course modules</h3></div></div><details class="curriculum-module"><summary><span>Module 7 &middot; Authentication &amp; Security<br><small style="font-weight:500;color:var(--ink-soft);">5 lessons &middot; 1h 20m</small></span><i class="bi bi-chevron-right chev"></i></summary><a href="video-player.html" class="lesson-row" style="text-decoration:none;color:inherit;"><span class="lstate done"><i class="bi bi-check-lg"></i></span><span class="ltitle">Password hashing with bcrypt<small>10:20</small></span></a><a href="video-player.html" class="lesson-row" style="text-decoration:none;color:inherit;"><span class="lstate done"><i class="bi bi-check-lg"></i></span><span class="ltitle">JWT-based authentication<small>16:40</small></span></a></details><details class="curriculum-module"><summary><span>Module 8 &middot; REST API Design<br><small style="font-weight:500;color:var(--ink-soft);">6 lessons &middot; 1h 45m</small></span><i class="bi bi-chevron-right chev"></i></summary><a href="video-player.html" class="lesson-row" style="text-decoration:none;color:inherit;"><span class="lstate done"><i class="bi bi-check-lg"></i></span><span class="ltitle">Designing resourceful routes<small>12:10</small></span></a><a href="video-player.html" class="lesson-row" style="text-decoration:none;color:inherit;"><span class="lstate done"><i class="bi bi-check-lg"></i></span><span class="ltitle">Pagination and filtering<small>14:30</small></span></a></details><details class="curriculum-module" open><summary><span>Module 9 &middot; Deployment &amp; DevOps<br><small style="font-weight:500;color:var(--ink-soft);">5 lessons &middot; 1h 30m</small></span><i class="bi bi-chevron-right chev"></i></summary><a href="video-player.html" class="lesson-row active-lesson" style="text-decoration:none;color:inherit;"><span class="lstate current"><i class="bi bi-play-fill"></i></span><span class="ltitle">Containerising with Docker<small>17:00</small></span></a><a href="#" class="lesson-row" style="text-decoration:none;color:inherit;"><span class="lstate locked"><i class="bi bi-lock-fill"></i></span><span class="ltitle">CI/CD with GitHub Actions<small>15:20</small></span></a><a href="#" class="lesson-row" style="text-decoration:none;color:inherit;"><span class="lstate locked"><i class="bi bi-lock-fill"></i></span><span class="ltitle">Zero-downtime deploys<small>13:45</small></span></a></details><details class="curriculum-module"><summary><span>Module 10 &middot; Capstone Project<br><small style="font-weight:500;color:var(--ink-soft);">4 lessons &middot; 2h 00m</small></span><i class="bi bi-chevron-right chev"></i></summary><a href="#" class="lesson-row" style="text-decoration:none;color:inherit;"><span class="lstate locked"><i class="bi bi-lock-fill"></i></span><span class="ltitle">Project brief &amp; scaffolding<small>8:00</small></span></a></details></div><div class="col-lg-4"><div class="stat-card mb-4"><h6 style="margin-bottom:10px;">Overall progress</h6><div class="progress" style="height:10px;"><div class="progress-bar" style="width:80%;background:var(--violet);"></div></div><small class="mono" style="color:var(--ink-soft);display:block;margin-top:8px;">80% &middot; 37/46 lessons</small></div><div class="stat-card mb-4"><h6 style="margin-bottom:10px;">Instructor</h6><div class="d-flex align-items-center gap-2"><img src="https://i.pravatar.cc/80?img=12" style="width:44px;height:44px;border-radius:50%;" alt=""><div><strong style="font-size:13.5px;">John Doe</strong><div style="font-size:11.5px;color:var(--ink-soft);">Full-stack engineer, 12yrs</div></div></div></div><div class="stat-card"><h6 style="margin-bottom:10px;">Course resources</h6><a href="materials.html" class="btn-nova-outline" style="width:100%;justify-content:center;margin-bottom:8px;"><i class="bi bi-folder2-open"></i> View materials</a><a href="certificate.html" class="btn-nova-outline" style="width:100%;justify-content:center;"><i class="bi bi-patch-check"></i> Certificate progress</a></div></div></div></section>
+</main>
+
+<footer class="site-footer">&copy; 2026 NovaLearn. All rights reserved.</footer>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
